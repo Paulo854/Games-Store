@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <meta http-equiv="X-AU-Compatible" content="ie-edge">
+  <title>Contato</title>
+<style type="text/css">
+  
+body{font-family: Arial, Helvetica, sans-serif;background-color: white;}
+  .content{display:flex;justify-content: center}
+  .contato{width:100%;max-height: 500px;}
+  .form{display: flex;flex-direction: column;}
+  .field{padding: 10px;margin-bottom: 15px;border: 1px solid #DDD; border-radius: 5px;font-family:  Arial, Helvetica, sans-serif;font-size: 16px;}
+  textarea{height: 150px;}
+
+
+</style>
+
+
+</head>
+<body>
+
+  <section class="content">
+
+    <div class="contato">
+      <h3>Formulario de Contato</h3>
+      <form class="form" method="POST" action="email.php">
+        <input class="fiel" type="text" name="nome" placeholder="Digite Seu nome aqui." required="required">
+        <input class="field" type="e-mail" name="email" placeholder="E-mail" required="required">
+        <textarea class="field" name="mesagem" placeholder="Digite sua mensagem aqui." required="required"></textarea>
+        <input class="field" type="submit" value="Enviar" name="btn">
+      </form>
+    </div>
+  </section>
+
+
+
+</body>
+</html>

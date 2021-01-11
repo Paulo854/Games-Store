@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pagamento</title>
+        <link rel="shortcut icon" type="image/x-icon" href="http://gamesstore.unaux.com//TCC/img/logo2.png">
+        <link rel="stylesheet" type="text/css" href="pagamento.css">
+    </head>
+    <body>
+        <div id="login">
+        <form class="box" method="POST" action="teste.php">
+        <h2>Pagamento</h2>
+        <p class="Saldação">Olá está é a parte final onde você irá fazer o pagamento de seu produto</p>
+        <br>
+        <input type="number" required min="1" max="16" name="cartao" id="card" placeholder="Coloque o numero de seu cartão de crédito">
+        <br>
+        <input type="date" name="vencimento" placeholder="Vencimento de seu cartão" required>
+        <br>
+        <input type="text" name="nome" placeholder="Coloque seu nome impreso no cartão" maxlength="255" minlength="25" required>
+        <br>    
+        <input type="number" name="parcelas" placeholder="Quantas parcelas você quer fazer" maxlength="2" minlength="2" required>
+        <br>
+        <input type="number" name="CV" placeholder="Coloque o codigo de seu cartão" maxlength="3" minlength="3" required>
+        <br>
+        <input type="checkbox" name="salvar" id="save">
+        <label for="save">Salvar dados do cartão para proximas compras</label>
+        <br>
+        <input type="submit" name="Pagar" value="Pagar">
+        </div>
+    </form>
+    </body>
+</html>
