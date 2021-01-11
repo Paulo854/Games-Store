@@ -21,7 +21,7 @@
             )
         ),
         "from" => array(
-            "email" => "dcsantos136@gmail.com"
+            "email" => "pchefea44@gmail.com"
         ),
         "subject" => $subject,
         "content" => array(
