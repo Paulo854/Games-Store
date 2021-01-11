@@ -7,7 +7,7 @@ $nome = addslashes($_POST['nome'])
 $email = addslashes($_POST['email'])
 $msg = addslashes($_POST['mensagem'])
 
-$to = "dcsantos136@gmail.com";
+$to = "dcs136@hotmail.com";
 $subject = "Contato Games Store";
 $body = "Nome: ".$nome. "\r\n".
 		"Email: ".$email. "\r\n".
@@ -24,7 +24,7 @@ if (mail($to,$subject,$body,$headers)){
 }else{
 
 	echo("Falha ao enviar email");
-}
+   }
+  }
 
-}
 ?>
