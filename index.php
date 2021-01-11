@@ -1,7 +1,7 @@
 <?php
     $email = "pchefea44@gmail.com";
     $name = "Joao";
-    $body = "Hey man, how are you? <br><br><a href='https://google.com'>Google</a>";
+    $body = "Hey man, how are you? <br><br><a href='https://gamesstores.azurewebsites.net/'>Games Store</a>";
     $subject = "Test email";
 
     $headers = array(
@@ -21,7 +21,7 @@
             )
         ),
         "from" => array(
-            "email" => "pchefea44@gmail.com"
+            "email" => "dcsantos136@gmail.com"
         ),
         "subject" => $subject,
         "content" => array(
