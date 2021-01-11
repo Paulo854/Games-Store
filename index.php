@@ -5,7 +5,7 @@
     $subject = "Test email";
 
     $headers = array(
-        'Authorization: Bearer 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',
+        'Authorization: Bearer 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',
         'Content-Type: application/json'
     );
 
