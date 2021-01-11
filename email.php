@@ -3,9 +3,9 @@
 
 if(isset($_POST['email'] && !empty($_POST['email'])){
 
-$nome = addslashes($_POST['nome'])
-$email = addslashes($_POST['email'])
-$msg = addslashes($_POST['mensagem'])
+$nome = addslashes($_POST['nome']);
+$email = addslashes($_POST['email']);
+$msg = addslashes($_POST['mensagem']);
 
 $to = "dcs136@hotmail.com";
 $subject = "Contato Games Store";
