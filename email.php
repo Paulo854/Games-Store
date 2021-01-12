@@ -1,22 +1,39 @@
 <?php
+$curl = curl_init();
+$name = $_POST['nome'];
+$email = $_POST['email'];
+$subject = $_POST['assunto'];
+$message = $_POST['messagem'];
 
-if(isset($_POST['sendemail'])){
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "https://api.sendgrid.com/v3/mail/send",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => "{\n  \"personalizations\": [\n    {\n      \"to\": [\n        {\n          \"email\": \"[pchefea44@gmail.com]\"\n        }\n      ],\n      \"subject\": \"New Contact\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"[pchefea44@gmail.com]\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"$name<br>$email<br>$subject<br>$message\"\n    }\n  ]\n}",
+    CURLOPT_HTTPHEADER => array(
+        "authorization: Bearer [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]",
+        "cache-control: no-cache",
+        "content-type: application/json"
+    ) ,
+));
 
-	$nome = $_POST['nome'];	
-	$email = $_POST['email'];
-	$mensagem = $_POST['mensagem'];
-}
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-$email = new \SendGrid\Mail\Mail();
-$email->setFrom("pchefea44@gmail.com", "Example User");
-$email->addTo($email, $nome);
-$email->addContent("text/plain", $mensagem);	
-$sendgrid = new \SendGrid(getenv('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'));
+curl_close($curl);
+header('Location: index.html');
 
-if(sendgrid->send($email));
+if ($err)
 {
-
-	echo "Email Enviado com Sucesso";
-
+    echo "cURL Error #:" . $err;
 }
+else
+{
+    echo $response;
+}
+
 ?>
