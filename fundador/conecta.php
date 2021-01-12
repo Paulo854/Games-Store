@@ -1,5 +1,5 @@
 <?php
- $conexao = mysqli_connect('sql313.unaux.com', 'unaux_27065308', 'nck0u9ngd8i57', 'unaux_27065308_contas');
+ $conexao = mysqli_connect('127.0.0.1:50871', 'azure', '6#vWHD_$', 'gamestore');
 
  mysqli_set_charset($conexao, 'utf8');
 
@@ -7,3 +7,5 @@
   die("Falha ao realizar a conexao: ".$conexao -> connect_error);
  }
  ?>
+
+ 	

@@ -1,5 +1,5 @@
 <?php
-$conexao = mysqli_connect('127.0.0.1:49686', 'azure', '6#vWHD_$', 'gamestore');
+$conexao = mysqli_connect('127.0.0.1:50871', 'azure', '6#vWHD_$', 'gamestore');
 
 
  mysqli_set_charset($conexao, 'utf8');
