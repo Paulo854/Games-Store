@@ -11,6 +11,13 @@ include('verifica_login.php');
 	<meta charset="utf-8">
 	<title>Comprar</title>
 	<link rel="stylesheet" type="text/css" href="mdss.css">
+	<script type="text/javascript">
+		history.pushState(null, null, document.URL);
+		window.addEventListener('popstate', function () {
+		    history.pushState(null, null, document.URL);
+      }
+     );	
+	</script>
 </head>
 <body>
 <a href="/construção/construção.html">
