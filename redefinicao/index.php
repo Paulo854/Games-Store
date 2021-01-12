@@ -50,7 +50,7 @@ session_start();
 
                         </form>
 
-                        <a href='recuperar.php'>Recuperar senha</a>
+                        <a href='http://localhost/loginphp/recuperar.php'>Recuperar senha</a>
 
                     </div>
                 </div>

@@ -38,7 +38,7 @@ session_start();
 
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" name="text" class="input is-large" placeholder="Seu email" autofocus="">
+                                    <input name="email" name="email" class="input is-large" placeholder="Seu email" autofocus="">
                                 </div>
                             </div>
 

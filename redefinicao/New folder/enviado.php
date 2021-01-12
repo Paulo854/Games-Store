@@ -21,7 +21,6 @@ session_start();
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-grey">Login — Atividade 3</h3>
-                    <h4 class="title has-text-grey">Recuperar senha por email</h4>
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
                     ?>
@@ -34,15 +33,13 @@ session_start();
                     ?>
                     <div class="box">
 
-                        <form action="conexao/enviaremail.php" method="POST">
+                        <form action="conexao/login.php" method="POST">
 
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" name="text" class="input is-large" placeholder="Seu email" autofocus="">
+                                    <p>Email para recuperar senha enviado.</p>
                                 </div>
                             </div>
-
-                            <button type="submit" class="button is-block is-link is-large is-fullwidth">Enviar</button>
 
                         </form>
 
