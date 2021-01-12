@@ -1,7 +1,7 @@
 <?php header("Content-type: text/html; charset=utf-8"); ?>
 <?php
 session_start();
-include('conexao.php');
+include('conecta.php');
 
 if(empty($_POST['email'])) {
 	header('Location: ../recuperar.php');
