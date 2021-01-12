@@ -35,7 +35,7 @@ if(empty($_POST['email'])) {
 	    $mail->Password = "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";
 	    $mail->SetFrom("pchefea44@gmail.com");
 	    $mail->Subject = "Recuperar senha";
-	    $mail->Body = "<b>Sua nova senha é: </b> " . $random ." <b> acesse o site Games Store";
+	    $mail->Body = "<b>Sua nova senha: </b> " . $random ." <b> acesse o site Games Store";
 	    $mail->AddAddress($email);
 
 	     if(!$mail->Send()) {
@@ -65,3 +65,9 @@ function randomPassword() {
     }
     return implode($pass); //turn the array into a string
 }
+?>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+</html>
