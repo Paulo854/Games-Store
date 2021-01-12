@@ -1,30 +1,23 @@
 <?php
 
+if(isset($_POST['sendemail'])){
 
-if(isset($_POST['email']) && !empty($_POST['email'])){
+	$nome = $_POST['nome'];	
+	$email = $_POST['email'];
+	$mensagem = $_POST['mensagem'];
+}
 
-$nome = addslashes($_POST['nome']);
-$email = addslashes($_POST['email']);
-$msg = addslashes($_POST['mensagem']);
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("pchefea44@gmail.com", "Example User");
+$email->addTo($email, $nome);
+$email->addContent("text/plain", $mensagem);
+$sendgrid = new \SendGrid(getenv('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'));
 
-$to = "dcs136@hotmail.com";
-$subject = "Contato Games Store";
-$body = "Nome: ".$nome. "\r\n".
-		"Email: ".$email. "\r\n".
-		"Mensagem: ".$mensagem; 
+if(sendgrid->send($email));{
 
-$headers = "From: dcsantos136@gmail.com" . "\r\n".
-			"reply-To: ".$email. "\e\n".
-			"X=Mailer:PHP/".phpversion();
+	echo "Email Enviado com Sucesso";
 
-if (mail($to,$subject,$body,$headers)){
-
-	echo("Email enviado com sucesso!");
-
-}else{
-
-	echo("Falha ao enviar email");
-   }
-  }
+}
+}
 
 ?>
