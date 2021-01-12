@@ -34,7 +34,7 @@ if(empty($_POST['email'])) {
 	    $mail->Password = "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";
 	    $mail->SetFrom("pchefea44@gmail.com");
 	    $mail->Subject = "Recuperar senha";
-	    $mail->Body = "<b>Código:</b> " . $random ." <b>Use o código para redefinir sua senha:</b> http://localhost/loginphp/redefinirsenha.php";
+	    $mail->Body = "<b>Sua nova senha é: </b> " . $random ." <br> <a href="gamesstores.azurewebsites.net/">Games Store</a>";
 	    $mail->AddAddress($email);
 
 	     if(!$mail->Send()) {
