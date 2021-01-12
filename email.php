@@ -14,9 +14,9 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n  \"personalizations\": [\n    {\n      \"to\": [\n        {\n          \"email\": \"pchefea44@gmail.com\"\n        }\n      ],\n      \"subject\": \"$subject\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"pchefea44@gmail.com\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"Nome: $name<br>$email<br>$subject<br>$message\"\n    }\n  ]\n}",
+  CURLOPT_POSTFIELDS => "{\n  \"personalizations\": [\n    {\n      \"to\": [\n        {\n          \"email\": \"dcsantos136@gmail.com\"\n        }\n      ],\n      \"subject\": \"$subject\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"dcsantos136@gmail.com\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"Nome: $name<br>$email<br>$subject<br>$message\"\n    }\n  ]\n}",
   CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer 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",
+    "authorization: Bearer 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",
     "cache-control: no-cache",
     "content-type: application/json"
   ),
