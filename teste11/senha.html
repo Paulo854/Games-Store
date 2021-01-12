@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Recuperação de Senha</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <script type = "text/javascript">
+
+        function preventBack(){window.history.forward();}
+        
+        setTimeout("preventBack()");
+        
+        window.onunload=function(){null};
+
+</script>
+        <link rel="shortcut icon" type="image/x-icon" href="http://gamesstore.unaux.com//TCC/img/logo2.png">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-login">
+        <form method="POST" action="alterar.php">
+        <img class="avatar" src="4b7b91fdff8a6d68c79671b133cc3956.png" alt="user login">
+        <div class="welcome">Nova Senha</div>
+        <br>
+        <input type="email" autocomplete="off" id="email" name="email" required maxlength="65" placeholder="Confirme seu E-mail">
+        <input type="password" autocomplete="off" id="senha"  name="senha" required maxlength="16" minlength="8" placeholder="Crie uma nova senha">
+        <br>
+        <input type="submit" name="procurar" value="Redefinir Senha">
+    </form>
+</div>
+</div>
+    </body>
+</html>
