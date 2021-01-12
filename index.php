@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <title>Games Stores</title>
@@ -154,7 +155,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
     <p>Olá Seja bem vindo ao nosso site este é nosso canal de ajuda qualquer duvida que você tiver mande uma mensagem para nossa equipe</p>
     <p><span class="w3-tag">ATEÇÃO!</span> Este Canal só podera ser ultilizado para perguntas relevantes não ultilizer de maneira errada.</p>
     <p class="w3-xxlarge"><strong>Formulário</strong> Prencha todos os campos:</p>
-    <form method="POST" action="email.php">
+    <form>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" id="nome" required name="nome"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" id="email" placeholder="Qual seu E-mail" required name="email" maxlength="70"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" id="Mensagem" placeholder="mensagem" required name="mensagem"></p>
@@ -186,5 +187,29 @@ function openMenu(evt, menuName) {
 document.getElementById("myLink").click();
 </script>
 
+<?php
+
+if(isset($_POST['sendemail'])){
+
+	$nome = $_POST['nome'];	
+	$email = $_POST['email'];
+	$mensagem = $_POST['mensagem'];
+}
+
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("pchefea44@gmail.com", "Example User");
+$email->addTo($email, $nome);
+$email->addContent("text/plain", $mensagem);	
+$sendgrid = new \SendGrid(getenv('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'));
+
+if(sendgrid->send($email));
+{
+
+	echo "Email Enviado com Sucesso";
+
+}
+?>
+
 </body>
 </html>
+
