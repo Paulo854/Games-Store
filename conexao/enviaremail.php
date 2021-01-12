@@ -27,12 +27,12 @@ if(empty($_POST['email'])) {
 	    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 	    $mail->SMTPAuth = true; // authentication enabled
 	    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-	    $mail->Host = "smtp.gmail.com";
+	    $mail->Host = "smtp.sendgrid.net";
 	    $mail->Port = 465; // or 587
 	    $mail->IsHTML(true);
-	    $mail->Username = "mayradbueno";
-	    $mail->Password = "<welcometothecircus26>";
-	    $mail->SetFrom("mayradbueno@gmail.com");
+	    $mail->Username = "apikey";
+	    $mail->Password = "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";
+	    $mail->SetFrom("pchefea44@gmail.com");
 	    $mail->Subject = "Recuperar senha";
 	    $mail->Body = "<b>Código:</b> " . $random ." <b>Use o código para redefinir sua senha:</b> http://localhost/loginphp/redefinirsenha.php";
 	    $mail->AddAddress($email);
