@@ -65,9 +65,3 @@ function randomPassword() {
     }
     return implode($pass); //turn the array into a string
 }
-?>
-<html>
-<head>
-	<meta charset="utf-8">
-</head>
-</html>
