@@ -7,6 +7,15 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/TCC/img/logo2.png">
 	
 </head>
+<script type = "text/javascript">
+
+function preventBack(){window.history.forward();}
+
+setTimeout("preventBack()", 0);
+
+window.onunload=function(){null};
+
+</script>	
 <body>
 	<div id="login">
 	<form class="box" method="post" action="autentica.php">
